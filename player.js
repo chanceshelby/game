@@ -28,7 +28,7 @@ let PlayerMoves = {
 			calcAttack: function() {
 				//who attacks first
 				let getPlayerSpeed = player.speed;
-				let get EnemySpeed = enemy.speed;
+				let getEnemySpeed = enemy.speed;
 		
 				//player attacks
 				let playerAttack = function() {
