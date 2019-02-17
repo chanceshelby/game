@@ -81,6 +81,7 @@ let PlayerMoves = {
 						let enemyAttackValues = enemyAttack();
 						let totalDamage = enemyAttackValues[0] * enemyAttackValues[1];
 						player.health = player.health - totalDamage;
+					}
 						//alert
 						alert("Enemy hit " + enemyAttackValues[0] + " damage " + enemyAttackValues[1] + " times");
 						if (palyer.health <= 0) {
