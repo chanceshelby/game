@@ -12,7 +12,7 @@ let GameManager = {
         player = new Player(classType, 100, 0, 100, 150, 200);
         break;
       case "Player3":
-        player = new Player(classType, 80, 0, 50, 200, 50);
+        player = new Player(classType, 80, 0, 100, 50, 200, 50);
         break;
       case "Player4":
         player = new Player(classType, 200, 0, 50, 200, 100);
@@ -40,15 +40,14 @@ let GameManager = {
 	  let chooseRandomEnemy = Math.floor(Math.random() * Math.floor(2));
 	  switch (chooseRandomEnemy) {
 	  	case 0:
-        	enemy = enemy00;
-			break;
+          enemy = enemy00;
+		  break;
 	  	case 1:
-	    	enemy = enemy01;
-			break;
+	      enemy = enemy01;
+		  break;
 	  }
 	  getHeader.innerHTML = '<p>Task: Choose your move</p>';
 	  getActions.innerHTML = '<a href="#" class="btn-prefight" onclick="PlayerMoves.calcAttack()">Attack!</a>';
-	  getEnemy.innerHTML = '<img src="img/' + enemy.enemyType.toLowerCase() + '.png" alt"' + enemy.enemyType + '"class="img-avatar"><div><h3>' + enemy.enemyType + '</h3><p class="health-enemy">Health: ' + enemy.health + '</p><p>Mana: ' + enemy.mana + '</p><p>Strength: ' + enemy.strength + '</p><p>Agility: ' + enemy.agility + '</p><p>Speed: ' + enemy.speed + '</p></div>'
-	  
+	  getEnemy.innerHTML = '<img src="img/' + enemy.classType.toLowerCase() + '.png" alt"' + enemy.classType + '"class="img-avatar"><div><h3>' + enemy.classType + '</h3><p class="health-enemy">Health: ' + enemy.health + '</p><p>Mana: ' + enemy.mana + '</p><p>Strength: ' + enemy.strength + '</p><p>Agility: ' + enemy.agility + '</p><p>Speed: ' + enemy.speed + '</p></div>';
   }
 }
